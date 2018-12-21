@@ -20,14 +20,12 @@ var imageSet = {
 let prevQuote = null;
 
 function setRandom(data) {
-  console.log('new');
   let randNumber = Math.floor(Math.random() * data.quotes.length);
   let quote = data.quotes[randNumber].quote;
   let author = data.quotes[randNumber].author;
   let image = imageSet[author];
 
   if (prevQuote === quote) {
-    console.log('1');
     randNumber = Math.floor(Math.random() * data.quotes.length);
     quote = data.quotes[randNumber].quote;
     author = data.quotes[randNumber].author;
@@ -35,19 +33,16 @@ function setRandom(data) {
     $(".container").css("background-image", `url(${image})`);
     prevQuote = quote;
   } else {
-    console.log('2');
     $(".container").css("background-image", `url(${image})`);
     prevQuote = quote;
   }
 }
 
 function parseData(data) {
-  let intervalID = setInterval(setRandom, 3000, data);
+  setRandom(data);
   $('#new-quote').click(function(e){
     e.preventDefault();
-    console.log('clicked');
-    clearInterval(intervalID);
-    intervalID = setInterval(setRandom, 3000, data);
+    setRandom(data);
   });
 };
 
