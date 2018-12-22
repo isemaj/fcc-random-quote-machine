@@ -66,10 +66,9 @@ html, body {
 a {
   text-decoration: none;
   color: black;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
   font-size: 1.2em;
   padding: 7px;
+  outline: none;
 }
 
 @media screen and (max-width: 425px){
