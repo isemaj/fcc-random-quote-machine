@@ -11,12 +11,13 @@ html, body {
 }
 
 .container {
+  display: grid;
   height: 100%;
   min-width: 310px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: grid;
+  transition: background-image 0.8s ease-out;
 }
 
 #quote-box {
@@ -72,8 +73,18 @@ a {
   }
 }
 
+#new-quote:hover .fa-sync-alt{
+  animation: load 1.3s linear infinite;
+}
 
-
+@keyframes load {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 
