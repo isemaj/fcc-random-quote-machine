@@ -6,22 +6,73 @@ html, body {
   height: 100%;
   margin: 0px;
   position: relative;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3vw;
 }
 
 .container {
   height: 100%;
+  min-width: 310px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: grid;
 }
 
-#new-quote {
-  height: 20px;
-  width: 20px;
-  background-color: blue;
-  position: absolute;
-  top: 0px;
+#quote-box {
+  margin: auto;
+  padding: 40px;
+  background-color: rgba(223, 222, 222, 0.79);
+  color: black;
+  border-radius: 5px;
+  height: 340px;
+  min-height: 100px;
+  width: 75vw;
+  display: grid;
+  grid: "a" 2fr "b" auto;
 }
+
+#text {
+  grid-area: a;
+  text-align: center;
+  margin: auto;
+}
+
+.bottom-part {
+  grid-area: b;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "c d";
+}
+
+.buttons {
+  grid-area: c;
+  justify-self: start;
+  align-self: end;
+}
+
+#author {
+  grid-area: d;
+  justify-self: end;
+  align-self: end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: 7px;
+}
+
+@media screen and (max-width: 425px){
+  html, body {
+    font-size: 5vw;
+  }
+}
+
+
 
 
 

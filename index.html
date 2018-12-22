@@ -6,24 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Nunito+Sans|Roboto:500,700" rel="stylesheet preload">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preload stylesheet" href="./style.css">
 
     <script src="./index.js" defer></script>
   </head>
 
   <body>
-    <div class="container"></div>
-    <div id="quote-box">
-      <span id="text"></span>
-      <span id="author"></span>
-      <div class="buttons">
-          <a id="tweet-quote" href=""></a>
-          <a id="new-quote" href=""></a>
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+    <div class="container">
+      <div id="quote-box">
+        <span id="text"></span>
+        <div class="bottom-part">
+            <div class="buttons">
+              <a id="tweet-quote" href="" target="_blank">
+                <i class="fab fa-twitter-square"></i>
+              </a>
+              <a id="new-quote" href="">
+                <i class="fas fa-sync-alt"></i>
+              </a>
+            </div>
+            <span id="author"></span>
+        </div>
       </div>
     </div>
   </body>
