@@ -38,15 +38,8 @@ function setRandom(data) {
 
 
   $(".container").css("background-image", `url(${image})`);
-  //$("#text").text(quote).fadeIn(600);
-  //$("#author").text(author).fadeIn(600);
-  $("#text").fadeOut(function(){
-    $(this).text(quote).fadeIn();
-  });
-
-  $("#author").fadeOut(function(){
-    $(this).text(author).fadeIn();
-  });
+  $("#text").text(quote).fadeIn(600);
+  $("#author").text(author).fadeIn(600);
 
   let shareQuote = `${document.getElementById("text").innerHTML} -${document.getElementById("author").innerHTML}`;
   let source = `${document.referrer}`;

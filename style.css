@@ -52,6 +52,11 @@ html, body {
   align-self: end;
 }
 
+#tweet-quote:hover {
+  color:#0084b4;
+  transition: color 350ms ease-in;
+}
+
 #author {
   grid-area: d;
   justify-self: end;
